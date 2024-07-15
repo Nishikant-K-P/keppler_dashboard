@@ -1,0 +1,390 @@
+{
+    "version": "v1",
+    "config": {
+        "visState": {
+            "filters": [],
+            "layers": [
+                {
+                    "id": "wi7neu8",
+                    "type": "icon",
+                    "config": {
+                        "dataId": "vacantHomes",
+                        "label": "Alarms",
+                        "color": [
+                            71,
+                            211,
+                            217
+                        ],
+                        "highlightColor": [
+                            252,
+                            242,
+                            26,
+                            255
+                        ],
+                        "columns": {
+                            "lat": "LATITUDE",
+                            "lng": "LONGITUDE",
+                            "icon": "ICON"
+                        },
+                        "isVisible": true,
+                        "visConfig": {
+                            "radius": 5,
+                            "fixedRadius": false,
+                            "opacity": 0.8,
+                            "colorRange": {
+                                "name": "ColorBrewer Reds-4",
+                                "type": "singlehue",
+                                "category": "ColorBrewer",
+                                "colors": [
+                                    "#FEE5D9",
+                                    "#FCAE91",
+                                    "#FB6A4A",
+                                    "#CB181D"
+                                ]
+                            },
+                            "radiusRange": [
+                                20,
+                                70
+                            ]
+                        },
+                        "hidden": false,
+                        "textLabel": [
+                            {
+                                "field": null,
+                                "color": [
+                                    255,
+                                    255,
+                                    255
+                                ],
+                                "size": 18,
+                                "offset": [
+                                    0,
+                                    0
+                                ],
+                                "anchor": "start",
+                                "alignment": "center",
+                                "outlineWidth": 0,
+                                "outlineColor": [
+                                    255,
+                                    0,
+                                    0,
+                                    255
+                                ],
+                                "background": false,
+                                "backgroundColor": [
+                                    0,
+                                    0,
+                                    200,
+                                    255
+                                ]
+                            }
+                        ]
+                    },
+                    "visualChannels": {
+                        "colorField": {
+                            "name": "NUMBER_ALARMS",
+                            "type": "integer"
+                        },
+                        "colorScale": "quantile",
+                        "sizeField": {
+                            "name": "NUMBER_ALARMS",
+                            "type": "integer"
+                        },
+                        "sizeScale": "sqrt"
+                    }
+                },
+                {
+                    "id": "vh6mwuj",
+                    "type": "icon",
+                    "config": {
+                        "dataId": "squatterTargets",
+                        "label": "Squatter_Prediction",
+                        "color": [
+                            218,
+                            112,
+                            191
+                        ],
+                        "highlightColor": [
+                            252,
+                            242,
+                            26,
+                            255
+                        ],
+                        "columns": {
+                            "lat": "LATITUDE",
+                            "lng": "LONGITUDE",
+                            "icon": "ICON"
+                        },
+                        "isVisible": false,
+                        "visConfig": {
+                            "radius": 20,
+                            "fixedRadius": false,
+                            "opacity": 0.8,
+                            "colorRange": {
+                                "name": "Custom Palette",
+                                "type": "custom",
+                                "category": "Custom",
+                                "colors": [
+                                    "#36F934",
+                                    "#C70039"
+                                ],
+                                "reversed": true
+                            },
+                            "radiusRange": [
+                                0,
+                                50
+                            ]
+                        },
+                        "hidden": false,
+                        "textLabel": [
+                            {
+                                "field": null,
+                                "color": [
+                                    255,
+                                    255,
+                                    255
+                                ],
+                                "size": 18,
+                                "offset": [
+                                    0,
+                                    0
+                                ],
+                                "anchor": "start",
+                                "alignment": "center",
+                                "outlineWidth": 0,
+                                "outlineColor": [
+                                    255,
+                                    0,
+                                    0,
+                                    255
+                                ],
+                                "background": false,
+                                "backgroundColor": [
+                                    0,
+                                    0,
+                                    200,
+                                    255
+                                ]
+                            }
+                        ]
+                    },
+                    "visualChannels": {
+                        "colorField": {
+                            "name": "IS_SQUATTER_TARGET",
+                            "type": "integer"
+                        },
+                        "colorScale": "quantize",
+                        "sizeField": null,
+                        "sizeScale": "linear"
+                    }
+                },
+                {
+                    "id": "5i8jm5k",
+                    "type": "icon",
+                    "config": {
+                        "dataId": "days",
+                        "label": "Days to Squatter Activity",
+                        "color": [
+                            241,
+                            92,
+                            23
+                        ],
+                        "highlightColor": [
+                            252,
+                            242,
+                            26,
+                            255
+                        ],
+                        "columns": {
+                            "lat": "LATITUDE",
+                            "lng": "LONGITUDE",
+                            "icon": "ICON"
+                        },
+                        "isVisible": false,
+                        "visConfig": {
+                            "radius": 20,
+                            "fixedRadius": false,
+                            "opacity": 0.8,
+                            "colorRange": {
+                                "name": "ColorBrewer Reds-8",
+                                "type": "singlehue",
+                                "category": "ColorBrewer",
+                                "colors": [
+                                    "#99000D",
+                                    "#CB181D",
+                                    "#EF3B2C",
+                                    "#FB6A4A",
+                                    "#FC9272",
+                                    "#FCBBA1",
+                                    "#FEE0D2",
+                                    "#FFF5F0"
+                                ],
+                                "reversed": true
+                            },
+                            "radiusRange": [
+                                0,
+                                50
+                            ]
+                        },
+                        "hidden": false,
+                        "textLabel": [
+                            {
+                                "field": null,
+                                "color": [
+                                    255,
+                                    255,
+                                    255
+                                ],
+                                "size": 18,
+                                "offset": [
+                                    0,
+                                    0
+                                ],
+                                "anchor": "start",
+                                "alignment": "center",
+                                "outlineWidth": 0,
+                                "outlineColor": [
+                                    255,
+                                    0,
+                                    0,
+                                    255
+                                ],
+                                "background": false,
+                                "backgroundColor": [
+                                    0,
+                                    0,
+                                    200,
+                                    255
+                                ]
+                            }
+                        ]
+                    },
+                    "visualChannels": {
+                        "colorField": {
+                            "name": "DAYS_TO_SQUATTER_ACTIVITY",
+                            "type": "integer"
+                        },
+                        "colorScale": "quantize",
+                        "sizeField": null,
+                        "sizeScale": "linear"
+                    }
+                }
+                
+                
+            ],
+            "effects": [],
+            "interactionConfig": {
+                "tooltip": {
+                    "fieldsToShow": {
+                        
+                        "vacantHomes": [
+                            {
+                                "name": "TRIBECA_ID",
+                                "format": null
+                            },
+                            {
+                                "name": "NUMBER_ALARMS",
+                                "format": null
+                            },
+                            {
+                                "name": "ADDRESS",
+                                "format": null
+                            }
+                        ],
+                        "squatterTargets": [
+                            {
+                                "name": "TRIBECA_ID",
+                                "format": null
+                            },
+                            {
+                                "name": "ADDRESS",
+                                "format": null
+                            },
+                            {
+                                "name": "IS_SQUATTER_TARGET",
+                                "format": null
+                            }
+                        ],
+                        "days": [
+                            {
+                                "name": "TRIBECA_ID",
+                                "format": null
+                            },
+                            {
+                                "name": "IS_SQUATTER_TARGET",
+                                "format": null
+                            },
+                            {
+                                "name": "DAYS_TO_SQUATTER_ACTIVITY",
+                                "format": null
+                            },
+                            {
+                                "name": "ADDRESS",
+                                "format": null
+                            }
+                        ]
+                        
+                    },
+                    "compareMode": false,
+                    "compareType": "absolute",
+                    "enabled": true
+                },
+                "brush": {
+                    "size": 0.5,
+                    "enabled": false
+                },
+                "geocoder": {
+                    "enabled": true
+                },
+                "coordinate": {
+                    "enabled": false
+                }
+            },
+            "layerBlending": "additive",
+            "overlayBlending": "screen",
+            "splitMaps": [],
+            "animationConfig": {
+                "currentTime": null,
+                "speed": 1
+            },
+            "editor": {
+                "features": [],
+                "visible": true
+            }
+        },
+        "mapState": {
+            "bearing": 0,
+            "dragRotate": false,
+            "latitude": 0,  
+            "longitude": 0, 
+            "pitch": 0,
+            "zoom": 20,
+            "isSplit": false
+            
+        },
+        "mapStyle": {
+            "styleType": "night",
+            "topLayerGroups": {},
+            "visibleLayerGroups": {
+                "label": true,
+                "road": true,
+                "border": false,
+                "building": true,
+                "water": false,
+                "land": true,
+                "3d building": true
+            },
+            "threeDBuildingColor": [
+                15.035172933000911,
+                15.035172933000911,
+                15.035172933000911
+            ],
+            "backgroundColor": [
+                0,
+                0,
+                0
+            ],
+            "mapStyles": {}
+        }
+    }
+}

@@ -7,6 +7,7 @@
     "@testing-library/react": "^9.3.2",
     "@testing-library/user-event": "^7.1.2",
     "kepler.gl": "^2.0.1",
+    "papaparse": "^5.4.1",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "react-palm": "^3.1.2",
@@ -17,8 +18,8 @@
     "swr": "^0.1.18"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
+    "start": "react-scripts --openssl-legacy-provider start",
+    "build": "react-scripts --openssl-legacy-provider build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
