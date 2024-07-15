@@ -33,7 +33,7 @@ function Map() {
 
   useEffect(() => {
     // Fetch and parse the CSV file
-    fetch('/Alarms_vacant_home.csv')
+    fetch('/Alarms_vacant_home_eta.csv')
       .then(response => response.text())
       .then(csvText => {
         Papa.parse(csvText, {
@@ -82,7 +82,7 @@ function Map() {
 
   React.useEffect(() => {
     if (alamrsmData && squatterPred && daysPred) {
-      console.log(alamrsmData)
+      
 
       const dataset = {
         fields: Object.keys(alamrsmData[0]).map(name => ({name, format: '', type: typeof alamrsmData
@@ -103,7 +103,7 @@ function Map() {
         rows: daysPred.map(row => Object.values(row))
 
       }
-      console.log(daysDataset)
+      
 
 
 
@@ -163,11 +163,11 @@ function Map() {
   }, [dispatch, alamrsmData, squatterPred, daysPred]);
 
   return (
-    <div style={{ position: 'absolute', width: '100%', height: '100%', minHeight: '70vh' }}>
+    <div style={{ position: 'absolute', width: '100%', height: '50%', minHeight: '70vh' }}>
       <AutoSizer>
         {({ height, width }) => (
           <KeplerGl
-            mapboxApiAccessToken={process.env.REACT_APP_MAPBOX_API}
+            mapboxApiAccessToken='pk.eyJ1IjoibmlzaGlrYW50a3AiLCJhIjoiY2x4cXBnNnZpMGRtZjJqcTN0bjN2N2ZwbSJ9.NwAid5_qIX9fl0Ofg-TmmQ'
             id="map"
             width={width}
             height={height}
