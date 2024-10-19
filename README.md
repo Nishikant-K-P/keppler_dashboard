@@ -29,5 +29,5 @@ This project is an interactive map-based dashboard built with **Kepler.gl** to v
    cd keppler_dashboard
 2. Install dependencies and run the server
   ```bash
-  npm install
-  npm start
+     npm install
+     npm start
