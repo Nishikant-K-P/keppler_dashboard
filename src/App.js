@@ -84,13 +84,13 @@ function Map() {
     if (alamrsmData && squatterPred && daysPred) {
       
 
-      const dataset = {
-        fields: Object.keys(alamrsmData[0]).map(name => ({name, format: '', type: typeof alamrsmData
-          [0][name]
-        })),
-        rows: alamrsmData
-          .map(row => Object.values(row))
-      };
+      // const dataset = {
+      //   fields: Object.keys(alamrsmData[0]).map(name => ({name, format: '', type: typeof alamrsmData
+      //     [0][name]
+      //   })),
+      //   rows: alamrsmData
+      //     .map(row => Object.values(row))
+      // };
 
       const squatterDataset = {
         fields: Object.keys(squatterPred[0]).map(name => ({ name, format: '', type: typeof squatterPred[0][name] })),
@@ -98,11 +98,11 @@ function Map() {
 
       }
 
-      const daysDataset = {
-        fields: Object.keys(daysPred[0]).map(name => ({ name, format: '', type: typeof daysPred[0][name] })),
-        rows: daysPred.map(row => Object.values(row))
+      // const daysDataset = {
+      //   fields: Object.keys(daysPred[0]).map(name => ({ name, format: '', type: typeof daysPred[0][name] })),
+      //   rows: daysPred.map(row => Object.values(row))
 
-      }
+      // }
       
 
 
@@ -119,13 +119,13 @@ function Map() {
             //   },
             //   data
             // },
-            {
-              info: {
-                label: "Vacant Homes",
-                id: "vacantHomes"
-              },
-              data: dataset
-            },
+            // {
+            //   info: {
+            //     label: "Vacant Homes",
+            //     id: "vacantHomes"
+            //   },
+            //   data: dataset
+            // },
             {
               info: {
                 label: "Squatter Targets",
@@ -133,13 +133,13 @@ function Map() {
               },
               data: squatterDataset
             },
-            {
-              info: {
-                label: "Days",
-                id: "days"
-              },
-              data: daysDataset
-            }
+            // {
+            //   info: {
+            //     label: "Days",
+            //     id: "days"
+            //   },
+            //   data: daysDataset
+            // }
 
 
           ],
@@ -163,7 +163,7 @@ function Map() {
   }, [dispatch, alamrsmData, squatterPred, daysPred]);
 
   return (
-    <div style={{ position: 'absolute', width: '100%', height: '50%', minHeight: '70vh' }}>
+    <div style={{ position: 'absolute', width: '100%', height: '100%', minHeight: '70vh' }}>
       <AutoSizer>
         {({ height, width }) => (
           <KeplerGl

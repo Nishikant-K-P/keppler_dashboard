@@ -98,7 +98,7 @@
                     "type": "icon",
                     "config": {
                         "dataId": "squatterTargets",
-                        "label": "Squatter_Prediction",
+                        "label": "Risk_Prediction",
                         "color": [
                             218,
                             112,
@@ -115,7 +115,7 @@
                             "lng": "LONGITUDE",
                             "icon": "ICON"
                         },
-                        "isVisible": false,
+                        "isVisible": true,
                         "visConfig": {
                             "radius": 20,
                             "fixedRadius": false,
@@ -170,7 +170,7 @@
                     },
                     "visualChannels": {
                         "colorField": {
-                            "name": "IS_SQUATTER_TARGET",
+                            "name": "IS_RISKY",
                             "type": "integer"
                         },
                         "colorScale": "quantize",
@@ -292,16 +292,13 @@
                             }
                         ],
                         "squatterTargets": [
-                            {
-                                "name": "TRIBECA_ID",
-                                "format": null
-                            },
+                            
                             {
                                 "name": "ADDRESS",
                                 "format": null
                             },
                             {
-                                "name": "IS_SQUATTER_TARGET",
+                                "name": "IS_RISKY",
                                 "format": null
                             }
                         ],
